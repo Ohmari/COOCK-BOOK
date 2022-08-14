@@ -1,0 +1,105 @@
+/* ---------------------------
+CSS CODE BY OHMTEC DESIGNS 
+------------------------------ */
+
+
+/* ------------------------------
+Footer
+-------------------------------- */
+
+.bg-footer {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    position: relative;
+}
+
+.bg-footer::before {
+    content: " ";
+    background: linear-gradient(to top, #000428, #004e92, transparent 200%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.bg-footer .container {
+    position: relative;
+}
+
+.footer-heading {
+    letter-spacing: 2px;
+}
+
+.footer-link a {
+    color: #acacac;
+    line-height: 40px;
+    font-size: 14px;
+    transition: all 0.5s;
+}
+
+.footer-link a:hover {
+    color: #1bbc9b;
+}
+
+.contact-info {
+    color: #acacac;
+    font-size: 14px;
+}
+
+.footer-social-icon {
+    font-size: 15px;
+    height: 30px;
+    width: 30px;
+    line-height: 34px;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
+}
+
+.footer-social-icon:hover {
+    opacity: 0.65;
+    color: #e6d8b1;
+}
+
+.facebook {
+    background-color: #4e71a8;
+    color: #ffffff;
+}
+
+.twitter {
+    background-color: #55acee;
+    color: #ffffff;
+}
+
+.google {
+    background-color: #d6492f;
+    color: #ffffff;
+}
+
+.apple {
+    background-color: #424041;
+    color: #ffffff;
+}
+
+.footer-alt {
+    color: #FFFFFF;
+    z-index: 9;
+    opacity: 0.65;
+}
+
+.footer-heading {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-heading:after {
+    content: '';
+    width: 25px;
+    border-bottom: 1px solid #FFF;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    border-bottom: 1px solid #1bbc9b;
+}

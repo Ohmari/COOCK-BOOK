@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hotel recepies display</title>
+
+    <!--------------------------- IMPORTED STYLESHEETS------------------------ ---->
+    <!-- ----------------------------FOR FONTAWESOME-------------------------- ---->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    />
+    
+    <!-- ----------------- IMPORTED FOR THE COUNTRY CODE LIST WITH FLAG ---------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  
+    <!-- ---------------------------------CSS BOOTSTRAP FILES ----------------------->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/bootstrap-icons.css" />
+    <!-- ---------------------------------------------------------------------------- -->
+
+    <!-- -------------------------------- CSS CUSTOM FILES--------------------------- -->
+    <link rel="stylesheet" href="css/typo.css" />
+    <link rel="stylesheet" href="css/modals.css" />
+    <!-- ---------------------------------------------------------------------------- -->
+  </head>
+
+  <body>
+    <!-- Main container -->
+    <div class="mainContainer">
+      <!-- Start of form tag -->
+      <form action="" class="shadow-lg">
+        <!-- Form div information container -->
+
+        <div class="infoContainer p-3">
+          <div class="formHead"><h3>VIP'S DETAILS FORM</h3></div>
+          <!-- Client information container -->
+          <div class="mt-3 mb-3 ms-5">
+            <h4>Personal Information</h4>
+          </div>
+          <!-- First personal info -->
+          <div class="shortDetails">
+            <div class="titleInfo">
+              <label for="title" class="form-label labels">Title</label>
+              <select
+                name="titleName"
+                id="title"
+                class="titleOption otherFields"
+              >
+                <option value="none">Please select</option>
+                <option value="mr">Mr</option>
+                <option value="mrs">Mrs</option>
+                <option value="miss">Miss</option>
+              </select>
+            </div>
+
+            <div class="genderInfo">
+              <label for="gender" class="form-label labels">Gender</label>
+              <select name="genderName" id="gender" class="gender otherFields">
+                <option value="none">Please select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="initials">
+              <label for="nickname" class="form-label dob labels"
+                >Nickname</label
+              >
+              <input
+                type="text"
+                class="form-control textfield"
+                id="nickname"
+                placeholder="Nickname"
+                name="nickName"
+                required
+              />
+            </div>
+          </div>
+          <!-- End of first personal info -->
+
+          <!-- Second personal info -->
+          <div class="otherDetails mt-2">
+            <div class="birthInfo">
+              <label for="dob" class="form-label dateofBirth labels"
+                >Date of Birth</label
+              >
+              <input
+                type="date"
+                class="otherFields"
+                id="dob"
+                name="dobName"
+                required
+              />
+            </div>
+
+            <div class="idType">
+              <label for="idtype" for class="form-label labels"
+                >Identification type</label
+              >
+              <select name="typeName" id="idtype" class="otherFields">
+                <option value="">Please select</option>
+                <option value="">ID Number</option>
+                <option value="">Passport Number</option>
+              </select>
+            </div>
+
+            <div class="idInfo">
+              <label for="idnumber" class="form-label idNumber labels"
+                >ID/passport</label
+              >
+              <input
+                type="text"
+                placeholder="Enter identification"
+                id="idnumber"
+                name="idName"
+                class="form-control textfield"
+                required
+              />
+            </div>
+          </div>
+          <!-- End of second personal info -->
+
+          <!-- Third personal info -->
+          <div class="names mt-2">
+            <div class="nameContainer">
+              <label for="firsname" class="form-label labels">First name</label>
+              <input
+                type="text"
+                class="form-control textfield"
+                id="firsname"
+                placeholder="Enter name"
+                name="firstName"
+                required
+              />
+            </div>
+
+            <div class="nameContainer">
+              <label for="middlename" class="form-label labels"
+                >Middle name</label
+              >
+              <input
+                type="text"
+                class="form-control textfield"
+                id="middlename"
+                placeholder="Enter name"
+                name="middleName"
+                required
+              />
+            </div>
+
+            <div class="nameContainer">
+              <label for="lastname" class="form-label labels">Last name</label>
+              <input
+                type="text"
+                class="form-control textfield"
+                id="lastname"
+                placeholder="Enter name"
+                name="lastName"
+                required
+              />
+            </div>
+          </div>
+          <!-- End of third personal info -->
+          <!-- and -->
+          <!-- End of personal information container -->
+
+          <!-- Place address information -->
+          <div class="mt-3 mb-3 ms-5">
+            <h4>Address</h4>
+          </div>
+          <div class="longAddress">
+            <div class="streetContainer">
+              <label for="street" class="form-label labels">Street</label>
+              <input
+                type="text"
+                class="form-control textfield"
+                id="street"
+                placeholder="Enter street"
+                name="streetName"
+                required
+              />
+            </div>
+
+            <div class="cityContainer">
+              <label for="city" class="form-label labels">City</label>
+              <input
+                type="text"
+                class="form-control textfield"
+                id="city"
+                placeholder="Enter city"
+                name="cityName"
+                required
+              />
+            </div>
+
+            <div class="nameContainer">
+              <label for="region" class="form-label labels">Region</label>
+              <input
+                type="text"
+                class="form-control textfield"
+                id="region"
+                placeholder="Enter region"
+                name="regionName"
+                required
+              />
+            </div>
+          </div>
+          <!-- End of long adrress -->
+
+          <div class="shortAddress">
+            <div class="countrysCont">
+              <label for="countries" class="form-label countrys labels"
+                >Country</label
+              >
+              <select id="countries" name="countriesName" class="otherFields">
+                <option value="none">Please select</option>
+                <option value="AF">Afghanistan</option>
+                <option value="AX">Åland Islands</option>
+                <option value="AL">Albania</option>
+                <option value="DZ">Algeria</option>
+                <option value="AS">American Samoa</option>
+                <option value="AD">Andorra</option>
+                <option value="AO">Angola</option>
+                <option value="AI">Anguilla</option>
+                <option value="AQ">Antarctica</option>
+                <option value="AG">Antigua and Barbuda</option>
+                <option value="AR">Argentina</option>
+                <option value="AM">Armenia</option>
+                <option value="AW">Aruba</option>
+                <option value="AU">Australia</option>
+                <option value="AT">Austria</option>
+                <option value="AZ">Azerbaijan</option>
+                <option value="BS">Bahamas</option>
+                <option value="BH">Bahrain</option>
+                <option value="BD">Bangladesh</option>
+                <option value="BB">Barbados</option>
+                <option value="BY">Belarus</option>
+                <option value="BE">Belgium</option>
+                <option value="BZ">Belize</option>
+                <option value="BJ">Benin</option>
+                <option value="BM">Bermuda</option>
+                <option value="BT">Bhutan</option>
+                <option value="BO">Bolivia</option>
+                <option value="BA">Bosnia and Herzegovina</option>
+                <option value="BW">Botswana</option>
+                <option value="BV">Bouvet Island</option>
+                <option value="BR">Brazil</option>
+                <option value="IO">British Indian Ocean Territory</option>
+                <option value="BN">Brunei Darussalam</option>
+                <option value="BG">Bulgaria</option>
+                <option value="BF">Burkina Faso</option>
+                <option value="BI">Burundi</option>
+                <option value="KH">Cambodia</option>
+                <option value="CM">Cameroon</option>
+                <option value="CA">Canada</option>
+                <option value="CV">Cape Verde</option>
+                <option value="KY">Cayman Islands</option>
+                <option value="CF">Central African Republic</option>
+                <option value="TD">Chad</option>
+                <option value="CL">Chile</option>
+                <option value="CN">China</option>
+                <option value="CX">Christmas Island</option>
+                <option value="CC">Cocos (Keeling) Islands</option>
+                <option value="CO">Colombia</option>
+                <option value="KM">Comoros</option>
+                <option value="CG">Congo</option>
+                <option value="CD">Congo,DRC</option>
+                <option value="CK">Cook Islands</option>
+                <option value="CR">Costa Rica</option>
+                <option value="CI">Cote D'ivoire</option>
+                <option value="HR">Croatia</option>
+                <option value="CU">Cuba</option>
+                <option value="CY">Cyprus</option>
+                <option value="CZ">Czechia</option>
+                <option value="DK">Denmark</option>
+                <option value="DJ">Djibouti</option>
+                <option value="DM">Dominica</option>
+                <option value="DO">Dominican Republic</option>
+                <option value="EC">Ecuador</option>
+                <option value="EG">Egypt</option>
+                <option value="SV">El Salvador</option>
+                <option value="GQ">Equatorial Guinea</option>
+                <option value="ER">Eritrea</option>
+                <option value="EE">Estonia</option>
+                <option value="ET">Ethiopia</option>
+                <option value="FK">Falkland Islands (Malvinas)</option>
+                <option value="FO">Faroe Islands</option>
+                <option value="FJ">Fiji</option>
+                <option value="FI">Finland</option>
+                <option value="FR">France</option>
+                <option value="GF">French Guiana</option>
+                <option value="PF">French Polynesia</option>
+                <option value="TF">French Southern Territories</option>
+                <option value="GA">Gabon</option>
+                <option value="GM">Gambia</option>
+                <option value="GE">Georgia</option>
+                <option value="DE">Germany</option>
+                <option value="GH">Ghana</option>
+                <option value="GI">Gibraltar</option>
+                <option value="GR">Greece</option>
+                <option value="GL">Greenland</option>
+                <option value="GD">Grenada</option>
+                <option value="GP">Guadeloupe</option>
+                <option value="GU">Guam</option>
+                <option value="GT">Guatemala</option>
+                <option value="GG">Guernsey</option>
+                <option value="GN">Guinea</option>
+                <option value="GW">Guinea-bissau</option>
+                <option value="GY">Guyana</option>
+                <option value="HT">Haiti</option>
+                <option value="HM">Heard Island and Mcdonald Islands</option>
+                <option value="VA">Holy See (Vatican City State)</option>
+                <option value="HN">Honduras</option>
+                <option value="HK">Hong Kong</option>
+                <option value="HU">Hungary</option>
+                <option value="IS">Iceland</option>
+                <option value="IN">India</option>
+                <option value="ID">Indonesia</option>
+                <option value="IR">Iran, Islamic Republic of</option>
+                <option value="IQ">Iraq</option>
+                <option value="IE">Ireland</option>
+                <option value="IM">Isle of Man</option>
+                <option value="IL">Israel</option>
+                <option value="IT">Italy</option>
+                <option value="JM">Jamaica</option>
+                <option value="JP">Japan</option>
+                <option value="JE">Jersey</option>
+                <option value="JO">Jordan</option>
+                <option value="KZ">Kazakhstan</option>
+                <option value="KE">Kenya</option>
+                <option value="KI">Kiribati</option>
+                <option value="KP">Korea, Democratic People's Republic</option>
+                <option value="KR">Korea, Republic of</option>
+                <option value="KW">Kuwait</option>
+                <option value="KG">Kyrgyzstan</option>
+                <option value="LA">Lao People's Democratic Republic</option>
+                <option value="LV">Latvia</option>
+                <option value="LB">Lebanon</option>
+                <option value="LS">Lesotho</option>
+                <option value="LR">Liberia</option>
+                <option value="LY">Libyan Arab Jamahiriya</option>
+                <option value="LI">Liechtenstein</option>
+                <option value="LT">Lithuania</option>
+                <option value="LU">Luxembourg</option>
+                <option value="MO">Macao</option>
+                <option value="MK">
+                  Macedonia, The Former Yugoslav Republic
+                </option>
+                <option value="MG">Madagascar</option>
+                <option value="MW">Malawi</option>
+                <option value="MY">Malaysia</option>
+                <option value="MV">Maldives</option>
+                <option value="ML">Mali</option>
+                <option value="MT">Malta</option>
+                <option value="MH">Marshall Islands</option>
+                <option value="MQ">Martinique</option>
+                <option value="MR">Mauritania</option>
+                <option value="MU">Mauritius</option>
+                <option value="YT">Mayotte</option>
+                <option value="MX">Mexico</option>
+                <option value="FM">Micronesia, Federated States of</option>
+                <option value="MD">Moldova, Republic of</option>
+                <option value="MC">Monaco</option>
+                <option value="MN">Mongolia</option>
+                <option value="ME">Montenegro</option>
+                <option value="MS">Montserrat</option>
+                <option value="MA">Morocco</option>
+                <option value="MZ">Mozambique</option>
+                <option value="MM">Myanmar</option>
+                <option value="NA">Namibia</option>
+                <option value="NR">Nauru</option>
+                <option value="NP">Nepal</option>
+                <option value="NL">Netherlands</option>
+                <option value="AN">Netherlands Antilles</option>
+                <option value="NC">New Caledonia</option>
+                <option value="NZ">New Zealand</option>
+                <option value="NI">Nicaragua</option>
+                <option value="NE">Niger</option>
+                <option value="NG">Nigeria</option>
+                <option value="NU">Niue</option>
+                <option value="NF">Norfolk Island</option>
+                <option value="MP">Northern Mariana Islands</option>
+                <option value="NO">Norway</option>
+                <option value="OM">Oman</option>
+                <option value="PK">Pakistan</option>
+                <option value="PW">Palau</option>
+                <option value="PS">Palestinian Territory, Occupied</option>
+                <option value="PA">Panama</option>
+                <option value="PG">Papua New Guinea</option>
+                <option value="PY">Paraguay</option>
+                <option value="PE">Peru</option>
+                <option value="PH">Philippines</option>
+                <option value="PN">Pitcairn</option>
+                <option value="PL">Poland</option>
+                <option value="PT">Portugal</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="QA">Qatar</option>
+                <option value="RE">Reunion</option>
+                <option value="RO">Romania</option>
+                <option value="RU">Russian Federation</option>
+                <option value="RW">Rwanda</option>
+                <option value="SH">Saint Helena</option>
+                <option value="KN">Saint Kitts and Nevis</option>
+                <option value="LC">Saint Lucia</option>
+                <option value="PM">Saint Pierre and Miquelon</option>
+                <option value="VC">Saint Vincent and The Grenadines</option>
+                <option value="WS">Samoa</option>
+                <option value="SM">San Marino</option>
+                <option value="ST">Sao Tome and Principe</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="SN">Senegal</option>
+                <option value="RS">Serbia</option>
+                <option value="SC">Seychelles</option>
+                <option value="SL">Sierra Leone</option>
+                <option value="SG">Singapore</option>
+                <option value="SK">Slovakia</option>
+                <option value="SI">Slovenia</option>
+                <option value="SB">Solomon Islands</option>
+                <option value="SO">Somalia</option>
+                <option value="ZA">South Africa</option>
+                <option value="GS">
+                  South Georgia and The South Sandwich Islands
+                </option>
+                <option value="ES">Spain</option>
+                <option value="LK">Sri Lanka</option>
+                <option value="SD">Sudan</option>
+                <option value="SR">Suriname</option>
+                <option value="SJ">Svalbard and Jan Mayen</option>
+                <option value="SZ">Swaziland</option>
+                <option value="SE">Sweden</option>
+                <option value="CH">Switzerland</option>
+                <option value="SY">Syrian Arab Republic</option>
+                <option value="TW">Taiwan, Province of China</option>
+                <option value="TJ">Tajikistan</option>
+                <option value="TZ">Tanzania, United Republic of</option>
+                <option value="TH">Thailand</option>
+                <option value="TL">Timor-leste</option>
+                <option value="TG">Togo</option>
+                <option value="TK">Tokelau</option>
+                <option value="TO">Tonga</option>
+                <option value="TT">Trinidad and Tobago</option>
+                <option value="TN">Tunisia</option>
+                <option value="TR">Turkey</option>
+                <option value="TM">Turkmenistan</option>
+                <option value="TC">Turks and Caicos Islands</option>
+                <option value="TV">Tuvalu</option>
+                <option value="UG">Uganda</option>
+                <option value="UA">Ukraine</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="GB">United Kingdom</option>
+                <option value="US">United States</option>
+                <option value="UM">United States Minor Outlying Islands</option>
+                <option value="UY">Uruguay</option>
+                <option value="UZ">Uzbekistan</option>
+                <option value="VU">Vanuatu</option>
+                <option value="VE">Venezuela</option>
+                <option value="VN">Viet Nam</option>
+                <option value="VG">Virgin Islands, British</option>
+                <option value="VI">Virgin Islands, U.S.</option>
+                <option value="WF">Wallis and Futuna</option>
+                <option value="EH">Western Sahara</option>
+                <option value="YE">Yemen</option>
+                <option value="ZM">Zambia</option>
+                <option value="ZW">Zimbabwe</option>
+              </select>
+            </div>
+
+            <div class="stateContainer">
+              <label for="province" class="form-label labels"
+                >State or Province</label
+              >
+              <input
+                type="text"
+                class="form-control textfield"
+                id="province"
+                placeholder="Enter province or state"
+                name="stateName"
+                required
+              />
+            </div>
+
+            <div class="codeContainer">
+              <label for="zipcode" class="form-label labels"
+                >Zip or postal code
+              </label>
+              <input
+                type="text"
+                class="form-control textfield"
+                id="zipcode"
+                placeholder="Enter postal code"
+                name="codeName"
+                required
+              />
+            </div>
+          </div>
+          <!-- End of short address information -->
+          <!-- and -->
+          <!-- End of place address information -->
+
+          <!-- submit button -->
+
+          <div class="mt-3 mb-3 ms-5">
+            <h4>Delivery Details</h4>
+          </div>
+          <!--  Event details Information -->
+          <div class="eventDetails">
+            <div class="companyCont">
+              <label for="company" class="form-label labels"
+                >Company name
+              </label>
+              <input
+                type="text"
+                class="form-control textfield"
+                id="company"
+                placeholder="Enter name"
+                name="compName"
+                required
+              />
+            </div>
+
+            <div class="address">
+              <label for="compaddress" class="form-label dob labels"
+                >Company address</label
+              >
+              <input
+                type="text"
+                class="form-control textfield"
+                id="compaddress"
+                placeholder="Enter address"
+                name="addressName"
+                required
+              />
+            </div>
+
+              <div class="input-group address ">
+                <label for="phone" class="form-label dob labels"
+                >Contact address</label
+              >
+                <span class="input-group-text p-0 selectCont">
+                  <!-- country codes (ISO 3166) and Dial codes. -->
+  <select name="countryCode" id="" class="selectCode">
+    
+    <option data-countryCode="KE" value="254" selected>KE +254</option>
+    
+      <option data-countryCode="DZ" value="213">DZ +213</option>
+      <option data-countryCode="AD" value="376">AD +376</option>
+      <option data-countryCode="AO" value="244">AO +244</option>
+      <option data-countryCode="AI" value="1264">AI +1264</option>
+      <option data-countryCode="AG" value="1268">AG +1268</option>
+      <option data-countryCode="AR" value="54">AR +54</option>
+      <option data-countryCode="AM" value="374">AM +374</option>
+      <option data-countryCode="AW" value="297">AW +297</option>
+      <option data-countryCode="AU" value="61">AU +61</option>
+      <option data-countryCode="AT" value="43">AT +43</option>
+      <option data-countryCode="AZ" value="994">AZ +994</option>
+      <option data-countryCode="BS" value="1242">BS +1242</option>
+      <option data-countryCode="BH" value="973">BH +973</option>
+      <option data-countryCode="BD" value="880">BD +880</option>
+      <option data-countryCode="BB" value="1246">BB +1246</option>
+      <option data-countryCode="BY" value="375">BY +375</option>
+      <option data-countryCode="BE" value="32">BE +32</option>
+      <option data-countryCode="BZ" value="501">BZ +501</option>
+      <option data-countryCode="BJ" value="229">BJ +229</option>
+      <option data-countryCode="BM" value="1441">BM +1441</option>
+      <option data-countryCode="BT" value="975">BT +975</option>
+      <option data-countryCode="BO" value="591">BO +591</option>
+      <option data-countryCode="BA" value="387">BA +387</option>
+      <option data-countryCode="BW" value="267">BW +267</option>
+      <option data-countryCode="BR" value="55">BR +55</option>
+      <option data-countryCode="BN" value="673">BN +673</option>
+      <option data-countryCode="BG" value="359">BG +359</option>
+      <option data-countryCode="BF" value="226">BF +226</option>
+      <option data-countryCode="BI" value="257">BI +257</option>
+      <option data-countryCode="KH" value="855">KH +855</option>
+      <option data-countryCode="CM" value="237">CM +237</option>
+      <option data-countryCode="CA" value="1">CA +1</option>
+      <option data-countryCode="CV" value="238">CV +238</option>
+      <option data-countryCode="KY" value="1345">KY +1345</option>
+      <option data-countryCode="CF" value="236">CF +236</option>
+      <option data-countryCode="CL" value="56">CL +56</option>
+      <option data-countryCode="CN" value="86">CN +86</option>
+      <option data-countryCode="CO" value="57">CO +57</option>
+      <option data-countryCode="KM" value="269">KM +269</option>
+      <option data-countryCode="CG" value="242">CG +242</option>
+      <option data-countryCode="CK" value="682">CK +682</option>
+      <option data-countryCode="CR" value="506">CR +506</option>
+      <option data-countryCode="HR" value="385">HR +385</option>
+      <option data-countryCode="CU" value="53">CU +53</option>
+      <option data-countryCode="CY" value="90392">CY +90392</option>
+      <option data-countryCode="CY" value="357">CY +357</option>
+      <option data-countryCode="CZ" value="42">CZ +42</option>
+      <option data-countryCode="DK" value="45">DK +45</option>
+      <option data-countryCode="DJ" value="253">DJ +253</option>
+      <option data-countryCode="DM" value="1809">DM +1809</option>
+      <option data-countryCode="DO" value="1809">DO +1809</option>
+      <option data-countryCode="EC" value="593">EC +593</option>
+      <option data-countryCode="EG" value="20">EG +20</option>
+      <option data-countryCode="SV" value="503">SV +503</option>
+      <option data-countryCode="GQ" value="240">GQ +240</option>
+      <option data-countryCode="ER" value="291">ER +291</option>
+      <option data-countryCode="EE" value="372">EE +372</option>
+      <option data-countryCode="ET" value="251">ET +251</option>
+      <option data-countryCode="FK" value="500">FK +500</option>
+      <option data-countryCode="FO" value="298">FO +298</option>
+      <option data-countryCode="FJ" value="679">FJ +679</option>
+      <option data-countryCode="FI" value="358">FI +358</option>
+      <option data-countryCode="FR" value="33">FR +33</option>
+      <option data-countryCode="GF" value="594">GF +594</option>
+      <option data-countryCode="PF" value="689">PF +689</option>
+      <option data-countryCode="GA" value="241">GA +241</option>
+      <option data-countryCode="GM" value="220">GM +220</option>
+      <option data-countryCode="GE" value="7880">GE +7880</option>
+      <option data-countryCode="DE" value="49">DE +49</option>
+      <option data-countryCode="GH" value="233">GH +233</option>
+      <option data-countryCode="GI" value="350">GI +350</option>
+      <option data-countryCode="GR" value="30">GR +30</option>
+      <option data-countryCode="GL" value="299">GL +299</option>
+      <option data-countryCode="GD" value="1473">GD +1473</option>
+      <option data-countryCode="GP" value="590">GP +590</option>
+      <option data-countryCode="GU" value="671">GU +671</option>
+      <option data-countryCode="GT" value="502">GT +502</option>
+      <option data-countryCode="GN" value="224">GN +224</option>
+      <option data-countryCode="GW" value="245">GW +245</option>
+      <option data-countryCode="GY" value="592">GY +592</option>
+      <option data-countryCode="HT" value="509">HT +509</option>
+      <option data-countryCode="HN" value="504">HK +504</option>
+      <option data-countryCode="HK" value="852">HK +852</option>
+      <option data-countryCode="HU" value="36">HU +36</option>
+      <option data-countryCode="IS" value="354">IS +354</option>
+      <option data-countryCode="IN" value="91">IN +91</option>
+      <option data-countryCode="ID" value="62">ID +62</option>
+      <option data-countryCode="IR" value="98">IR +98</option>
+      <option data-countryCode="IQ" value="964">IQ +964</option>
+      <option data-countryCode="IE" value="353">IE +353</option>
+      <option data-countryCode="IL" value="972">IL +972</option>
+      <option data-countryCode="IT" value="39">IT +39</option>
+      <option data-countryCode="JM" value="1876">JM +1876</option>
+      <option data-countryCode="JP" value="81">JP +81</option>
+      <option data-countryCode="JO" value="962">JO +962</option>
+      <option data-countryCode="KZ" value="7">KZ +7</option>
+      <!-- <option data-countryCode="KE" value="254">KE (+254)</option> -->
+      <option data-countryCode="KI" value="686">KI +686</option>
+      <option data-countryCode="KP" value="850">KP +850</option>
+      <option data-countryCode="KR" value="82">KR +82</option>
+      <option data-countryCode="KW" value="965">KW +965</option>
+      <option data-countryCode="KG" value="996">KG +996</option>
+      <option data-countryCode="LA" value="856">LA +856</option>
+      <option data-countryCode="LV" value="371">LV +371</option>
+      <option data-countryCode="LB" value="961">LB +961</option>
+      <option data-countryCode="LS" value="266">LS +266</option>
+      <option data-countryCode="LR" value="231">LR +231</option>
+      <option data-countryCode="LY" value="218">LY +218</option>
+      <option data-countryCode="LI" value="417">LI +417</option>
+      <option data-countryCode="LT" value="370">LT +370</option>
+      <option data-countryCode="LU" value="352">LU +352</option>
+      <option data-countryCode="MO" value="853">MO +853</option>
+      <option data-countryCode="MK" value="389">MK +389</option>
+      <option data-countryCode="MG" value="261">MG +261</option>
+      <option data-countryCode="MW" value="265">MW +265</option>
+      <option data-countryCode="MY" value="60">MY +60</option>
+      <option data-countryCode="MV" value="960">MV +960</option>
+      <option data-countryCode="ML" value="223">ML +223</option>
+      <option data-countryCode="MT" value="356">MT +356</option>
+      <option data-countryCode="MH" value="692">MH +692</option>
+      <option data-countryCode="MQ" value="596">MQ +596</option>
+      <option data-countryCode="MR" value="222">MR +222</option>
+      <option data-countryCode="YT" value="269">YT +269</option>
+      <option data-countryCode="MX" value="52">MX +52</option>
+      <option data-countryCode="FM" value="691">FM +691</option>
+      <option data-countryCode="MD" value="373">MD +373</option>
+      <option data-countryCode="MC" value="377">MC +377</option>
+      <option data-countryCode="MN" value="976">MN +976</option>
+      <option data-countryCode="MS" value="1664">MS +1664</option>
+      <option data-countryCode="MA" value="212">MA +212</option>
+      <option data-countryCode="MZ" value="258">MZ +258</option>
+      <option data-countryCode="MN" value="95">MN +95</option>
+      <option data-countryCode="NA" value="264">NA +264</option>
+      <option data-countryCode="NR" value="674">NR +674</option>
+      <option data-countryCode="NP" value="977">NP +977</option>
+      <option data-countryCode="NL" value="31">NL +31</option>
+      <option data-countryCode="NC" value="687">NC +687</option>
+      <option data-countryCode="NZ" value="64">NZ +64</option>
+      <option data-countryCode="NI" value="505">NI +505</option>
+      <option data-countryCode="NE" value="227">NE +227</option>
+      <option data-countryCode="NG" value="234">NG +234</option>
+      <option data-countryCode="NU" value="683">NU +683</option>
+      <option data-countryCode="NF" value="672">NF +672</option>
+      <option data-countryCode="NP" value="670">NP +670</option>
+      <option data-countryCode="NO" value="47">NO +47</option>
+      <option data-countryCode="OM" value="968">OM +968</option>
+      <option data-countryCode="PW" value="680">PW +680</option>
+      <option data-countryCode="PA" value="507">PA +507</option>
+      <option data-countryCode="PG" value="675">PG +675</option>
+      <option data-countryCode="PY" value="595">PY +595</option>
+      <option data-countryCode="PE" value="51">PE +51</option>
+      <option data-countryCode="PH" value="63">PHs +63</option>
+      <option data-countryCode="PL" value="48">PL +48</option>
+      <option data-countryCode="PT" value="351">PT +351</option>
+      <option data-countryCode="PR" value="1787">PR +1787</option>
+      <option data-countryCode="QA" value="974">QA +974</option>
+      <option data-countryCode="RE" value="262">RE +262</option>
+      <option data-countryCode="RO" value="40">RO +40</option>
+      <option data-countryCode="RU" value="7">RU +7</option>
+      <option data-countryCode="RW" value="250">RW +250</option>
+      <option data-countryCode="SM" value="378">SM +378</option>
+      <option data-countryCode="ST" value="239">ST +239</option>
+      <option data-countryCode="SA" value="966">SA +966</option>
+      <option data-countryCode="SN" value="221">SN +221</option>
+      <option data-countryCode="CS" value="381">CS +381</option>
+      <option data-countryCode="SC" value="248">SC +248</option>
+      <option data-countryCode="SL" value="232">SL +232</option>
+      <option data-countryCode="SG" value="65">SG +65</option>
+      <option data-countryCode="SK" value="421">SK +421</option>
+      <option data-countryCode="SI" value="386">SI +386</option>
+      <option data-countryCode="SB" value="677">SB +677</option>
+      <option data-countryCode="SO" value="252">SO +252</option>
+      <option data-countryCode="ZA" value="27">ZA +27</option>
+      <option data-countryCode="ES" value="34">ES +34</option>
+      <option data-countryCode="LK" value="94">LK +94</option>
+      <option data-countryCode="SH" value="290">SH +290</option>
+      <option data-countryCode="KN" value="1869">KN +1869</option>
+      <option data-countryCode="SC" value="1758">SC +1758</option>
+      <option data-countryCode="SD" value="249">SD +249</option>
+      <option data-countryCode="SR" value="597">SR +597</option>
+      <option data-countryCode="SZ" value="268">SZ +268</option>
+      <option data-countryCode="SE" value="46">SE +46</option>
+      <option data-countryCode="CH" value="41">CH +41</option>
+      <option data-countryCode="SI" value="963">SI +963</option>
+      <option data-countryCode="TW" value="886">TW +886</option>
+      <option data-countryCode="TJ" value="7">TJ +7</option>
+      <option data-countryCode="TH" value="66">TH +66</option>
+      <option data-countryCode="TG" value="228">TG +228</option>
+      <option data-countryCode="TO" value="676">TO +676</option>
+      <option data-countryCode="TT" value="1868">TT +1868</option>
+      <option data-countryCode="TN" value="216">TN +216</option>
+      <option data-countryCode="TR" value="90">TR +90</option>
+      <option data-countryCode="TM" value="7">TM +7</option>
+      <option data-countryCode="TM" value="993">TM +993</option>
+      <option data-countryCode="TC" value="1649">TC +1649</option>
+      <option data-countryCode="TV" value="688">TV +688</option>
+      <option data-countryCode="UG" value="256">UG +256</option>
+      <option data-countryCode="GB" value="44">UK +44</option>
+      <option data-countryCode="UA" value="380">UA +380</option>
+      <option data-countryCode="AE" value="971">AE +971</option>
+      <option data-countryCode="UY" value="598">UY +598</option>
+      <option data-countryCode="US" value="1">USA +1</option>
+      <option data-countryCode="UZ" value="7">UZ +7</option>
+      <option data-countryCode="VU" value="678">VU +678</option>
+      <option data-countryCode="VA" value="379">VA +379</option>
+      <option data-countryCode="VE" value="58">VE +58</option>
+      <option data-countryCode="VN" value="84">VN +84</option>
+      <option data-countryCode="VG" value="84">VG +1284</option>
+      <option data-countryCode="VI" value="84">VI +1340</option>
+      <option data-countryCode="WF" value="681">WF +681</option>
+      <option data-countryCode="YE" value="969">YE +969</option>
+      <option data-countryCode="YE" value="967">YE +967</option>
+      <option data-countryCode="ZM" value="260">ZM +260</option>
+      <option data-countryCode="ZW" value="263">ZW +263</option>
+    
+  </select>
+                </span>
+
+                <input
+                type="tel"
+                class="form-control textfield"
+                id="phone"
+                placeholder="Enter phone"
+                name="phoneName"
+                required
+              />
+             
+            </div>
+          </div>
+          <!-- End of event details information -->
+
+          <!--  Event details Information -->
+          <div class="eventDetails">
+            <div class="companyCont">
+              <label for="emailInput" class="form-label labels"
+                >Email (Optional)
+              </label>
+              <input
+                type="email"
+                class="form-control textfield"
+                id="emailInput"
+                placeholder="Enter email"
+                name="emailName"
+                required
+              />
+            </div>
+
+            <div class="time">
+              <label for="timeDelivery" class="form-label dob labels"
+                >Time of delivery</label
+              >
+              <input
+                type="time"
+                class="form-control textfield"
+                id="timeDelivery"
+                placeholder="Enter time"
+                name="timeName"
+                required
+              />
+            </div>
+
+            <div class="eventInfo">
+              <label for="eventdate" class="form-label dob labels"
+                >Date of delivery</label
+              >
+              <input
+                type="date"
+                class="otherFields"
+                id="eventdate"
+                name="eventName"
+                required
+              />
+            </div>
+          </div>
+          <!-- End of event details information -->
+
+          <!-- More event details container -->
+
+          <div class="moreEventDetails">
+            <!-- Vip's number choice -->
+            <div class="vipsNumber">
+              <label class="labels form-label w-100">Number of VIP's</label>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input me-4"
+                  id="radio1"
+                  name="optradio"
+                  value="option1"
+                  checked
+                />
+                <label class="form-check-label ms-2" for="radio1">1-2</label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input me-4"
+                  id="radio2"
+                  name="optradio"
+                  value="option2"
+                />
+                <label class="form-check-label ms-2" for="radio2">3-5</label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input me-4"
+                  id="radio3"
+                  name="optradio"
+                  value="option3"
+                />
+                <label class="form-check-label ms-2" for="radio3">6-10</label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input me-4"
+                  id="radio4"
+                  name="optradio"
+                  value="option4"
+                />
+                <label class="form-check-label ms-2">10+</label>
+              </div>
+            </div>
+            <!-- End of the choice of VIP's number -->
+
+            <div class="foodType">
+              <label for="foodtype" class="form-label labels">Food Type</label>
+              <select name="foodName" id="foodtype" class="otherFields">
+                <option value="">Please select</option>
+                <option value="">African</option>
+                <option value="">Chinese</option>
+                <option value="">Italian</option>
+              </select>
+            </div>
+
+            <div class="payType">
+              <label for="paytype" class="form-label labels"
+                >Payment Method</label
+              >
+              <select name="payName" id="paytype" class="otherFields">
+                <option value="">Please select</option>
+                <option value="">Cash</option>
+                <option value="">Mpesa</option>
+                <option value="">Card</option>
+              </select>
+            </div>
+            <!-- End of event type details -->
+          </div>
+          <!-- End of more event details container -->
+          <!-- and -->
+          <!-- End of event details information -->
+          <div class="submitButton mt-5">
+            <button type="button" class="btn bg-secondary">Submit</button>
+          </div>
+        </div>
+        <!-- End of client information container -->
+      </form>
+      <!-- End of form tag -->
+    </div>
+    <!-- End of main container -->
+
+    <!-- <script>
+      var input = document.querySelector("#phone");
+window.intlTelInput(input, {
+  separateDialCode: true
+}); -->
+    </script>
+  </body>
+</html>
